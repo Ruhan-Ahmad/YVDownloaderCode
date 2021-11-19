@@ -7,7 +7,7 @@ import io
 import requests
 
 app = Flask(__name__)
-@app.route('/api')
+@app.route('/')
 def route():
     return{
         "name": ["Ruhan", "Ahmad"]
@@ -37,7 +37,6 @@ def passLink(link): #pass link to youtube class
         return yt, True
     except pytube.exceptions.RegexMatchError as e:
         return None,False
-
 
 def title(yt):
     titleVid = yt.title
